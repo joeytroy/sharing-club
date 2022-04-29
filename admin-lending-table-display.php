@@ -19,18 +19,18 @@ if ( ! defined( 'ABSPATH' ) || !is_user_logged_in()) exit; // Exit if accessed d
 if(!class_exists('Lending_Table')){
     require_once plugin_dir_path( __FILE__ ) . 'admin-lending-table.php';
 }
-    
-    
+
+
     //Create an instance of our package class...
     $testListTable = new Lending_Table();
     //Fetch, prepare, sort, and filter our data...
     $testListTable->prepare_items();
-    
+
     ?>
     <div class="wrap">
-        
+
         <div id="icon-users" class="icon32"><br/></div>
-        <h2>Liste des prêts <a class="add-new-h2" href="<?php echo get_admin_url(get_current_blog_id(), 'admin.php?page=display_lending_form&post_type=shared_item');?>"><?php _e('Add new lending', 'sharing-club')?></a></h2>
+        <h2>Lendings <a class="add-new-h2" href="<?php echo get_admin_url(get_current_blog_id(), 'admin.php?page=display_lending_form&post_type=shared_item');?>"><?php _e('Add new lending', 'sharing-club')?></a></h2>
         <?php
             $message = '';
             if ('delete' === $testListTable->current_action()) {
@@ -46,5 +46,5 @@ if(!class_exists('Lending_Table')){
             <!-- Now we can render the completed list table -->
             <?php $testListTable->display() ?>
         </form>
-        
+
     </div>

@@ -1,8 +1,8 @@
 === Sharing Club ===
-Contributors: netdelight, jdevroed, mpol
+Contributors: netdelight, jdevroed, mpol, joeytroy
 Tags: share, lend, community, borrow, loan, lending, book, library, buddypress, sharing club
 Requires at least: 4.0
-Tested up to: 5.1
+Tested up to: 5.9.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -75,7 +75,7 @@ NB: dates are currently in the dd/mm/yyyy format
 = 1.0 =
 Public release - the plugin icon is based on Hand by Nick Abrams from the Noun Project
 
-== Upgrade Notice == 
+== Upgrade Notice ==
 This fix the capabilities bug in the admin and add extra fields to the lendings and the objects.
 
 == Screenshots ==
@@ -87,7 +87,7 @@ This fix the capabilities bug in the admin and add extra fields to the lendings 
 
 Yes, if the "notes" field is not enough, you can add other custom field using [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/).
 If you're tech savvy and want to add extra functionalities to the lendings, you have to know that they are actually "custom comments", mapped liked this :
-	
+
 	User			user_id
 	Object			comment_post_ID
 	Lending date	comment_date
@@ -97,11 +97,11 @@ If you're tech savvy and want to add extra functionalities to the lendings, you 
 	Rating			comment_karma
 
 So, feel free to use the other fields from the `wp_comments` table to store extra lending data.
-	
+
 = Can my members share their own objects ? =
 
 	Yes, you can allow your users to join the club and add their objects. If they are not administrators, use [Ultimate Member](https://wordpress.org/plugins/ultimate-member/) to give them a restricted access to your admin. You can display the user name next to the item title uncommenting `<?php the_author(); ?>` in `templates/single-shared_item.php` or in the shared item list modifying the `templates/Walker_Category_Posts.php` accordingly.
-	
+
 = Is this plugin compatible with BuddyPress ? =
 
 	Yes, actually it was developped for a BuddyPress community in the first place.
