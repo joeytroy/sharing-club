@@ -63,7 +63,7 @@ if ( ! class_exists( 'SCWP_Theme_Options' ) ) {
 				'theme-settings',
 				array( 'SCWP_Theme_Options', 'create_admin_page' )
 			);
-            
+
 		}
 
 		/**
@@ -94,7 +94,7 @@ if ( ! class_exists( 'SCWP_Theme_Options' ) ) {
 				} else {
 					unset( $options['public'] ); // Remove from options if not checked
 				}
-                
+
                 if ( ! empty( $options['hide_comments'] ) ) {
 					$options['hide_comments'] = 'on';
 				} else {

@@ -48,9 +48,9 @@ $wpdb->comments.*, user_nicename FROM ".$wpdb->comments." LEFT JOIN ".$wpdb->use
                 // not available
                 echo '<em>';
                 if($status->who=='you'){
-                    if($status->availability=='requested')_e('You have requested this object.', 'sharing-club');
-                    else _e('You borrowed this object.', 'sharing-club');
-                } else printf(__('This object is currently borrowed by %s.', 'sharing-club'), $status->user_nicename);
+                    if($status->availability=='requested')_e('You have requested this item.', 'sharing-club');
+                    else _e('You borrowed this item.', 'sharing-club');
+                } else printf(__('This item is currently borrowed by %s.', 'sharing-club'), $status->user_nicename);
                 echo '</em>';
             }else if(is_user_logged_in()){
             // available ?>
